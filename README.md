@@ -11,6 +11,4 @@ recursive call considers.
 
 ## Runtime Analysis
 
-Analyse the time complexity of your implementation and give a $\Theta$ bound for
-its worst-case runtime. Add your answer, including your reasoning, to this
-markdown file.
+In each iteration through the while-loop we observe that finding the pivot and pushing each sub-array at the end of every iteration run in constant time. However, things get interesting when we turn to partitioning the arrays. I believe this to take linear time given that we must deal with every element of our unsorted array (at least to begin with). Finally, analyzing what's going on with the left and right sub arrays we can see pushing all the elements to both of the sub arrays adds an additional O(2*log2(n)) to our time-complexity. Taking out this constant factor we get a final answer of Θ(n*log2(n))
